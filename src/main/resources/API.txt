@@ -1,0 +1,16 @@
+
+
+//Post : http://localhost:8080/search
+{
+    "keyword": "AL",
+    "indices": {
+        "companies": [
+            "name",
+            "tag_list"
+        ],
+        "zips": [
+            "city",
+            "state"
+        ]
+    }
+}
