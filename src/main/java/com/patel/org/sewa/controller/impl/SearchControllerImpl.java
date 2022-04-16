@@ -29,5 +29,4 @@ public class SearchControllerImpl implements SearchController {
 		log.info("-----Search api method.----");
 		return ResponseEntity.status(HttpStatus.OK).body(searchService.search(searchRequest, pageable));
 	}
-
 }
