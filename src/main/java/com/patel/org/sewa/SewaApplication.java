@@ -8,5 +8,6 @@ public class SewaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SewaApplication.class, args);
+
 	}
 }
