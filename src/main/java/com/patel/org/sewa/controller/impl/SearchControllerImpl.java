@@ -2,6 +2,8 @@ package com.patel.org.sewa.controller.impl;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -24,9 +26,10 @@ public class SearchControllerImpl implements SearchController {
 	private SearchService searchService;
 
 	@Override
-	public ResponseEntity<SearchResponse> searchUsingPOST(@RequestBody SearchRequest searchRequest, Pageable pageable)
-			throws IOException {
+	public ResponseEntity<SearchResponse> searchUsingPOST(HttpServletRequest req,
+			@RequestBody SearchRequest searchRequest, Pageable pageable) throws IOException {
 		log.info("-----Search api method.----");
 		return ResponseEntity.status(HttpStatus.OK).body(searchService.search(searchRequest, pageable));
 	}
+
 }
